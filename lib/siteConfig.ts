@@ -1,6 +1,6 @@
 // Placeholder until the GitHub username / custom domain is known.
 // Feeds metadataBase in app/layout.tsx.
-export const SITE_URL = "https://example.github.io/westbridge-accessibility";
+export const SITE_URL = "https://wnlowe.github.io/westbridge-accessibility/";
 
 export const SITE_NAME = "Westbridge Accessibility";
 
