@@ -1,0 +1,29 @@
+{
+  "name": "westbridge-accessibility",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "npx serve out",
+    "fonts:update": "node scripts/update-google-fonts.mjs"
+  },
+  "dependencies": {
+    "docx": "^9.8.1",
+    "exceljs": "^4.4.0",
+    "jszip": "^3.10.2",
+    "next": "^15.3.1",
+    "pptxgenjs": "^4.0.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer": "^10",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5"
+  }
+}

@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Visible, high-contrast focus ring everywhere (§4.1 focus indicators) */
+  :focus-visible {
+    outline: 3px solid #104862;
+    outline-offset: 2px;
+  }
+  .on-dark :focus-visible {
+    outline-color: #fec024;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 font-bold transition-colors disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply btn bg-westbridge text-white hover:bg-westbridge-deep;
+  }
+  .btn-on-dark {
+    @apply btn bg-amber text-ink hover:bg-white;
+  }
+  .btn-secondary {
+    @apply btn border-2 border-westbridge bg-white text-westbridge hover:bg-mist;
+  }
+  .field {
+    @apply rounded-md border-2 border-ink/60 bg-white px-3 py-2 text-ink;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in {
+    animation: fade-in 200ms ease-out both;
+  }
+}
+
+/* Print: hide site chrome and interactive controls (Quick Reference, Brand summary) */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white;
+  }
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+  }
+}
